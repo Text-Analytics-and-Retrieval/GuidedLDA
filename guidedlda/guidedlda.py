@@ -13,9 +13,9 @@ import random
 
 logger = logging.getLogger('guidedlda')
 
-PY2 = sys.version_info[0] == 2
-if PY2:
-    range = xrange
+# PY2 = sys.version_info[0] == 2
+# if PY2:
+#     range = xrange
 
 
 class GuidedLDA:

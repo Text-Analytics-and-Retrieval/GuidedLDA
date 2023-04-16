@@ -16,5 +16,5 @@ setup(
     pbr=True,
     # ext_modules = cythonize("guidedlda/_guidedlda.pyx"
     ext_modules=[module1]
-                            )
+
 )

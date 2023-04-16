@@ -5,11 +5,16 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file, You
 # can obtain one at http://mozilla.org/MPL/2.0/.
 
-from setuptools import setup
-from Cython.Build import cythonize
+from setuptools import setup, Extension
+# from Cython.Build import cythonize
+
+module1 = Extension('_guidedlda',
+                    sources = ['_guidedlda.c'])
 
 setup(
     setup_requires=['pbr'],
     pbr=True,
-    ext_modules = cythonize("guidedlda/_guidedlda.pyx")
+    # ext_modules = cythonize("guidedlda/_guidedlda.pyx"
+    ext_modules=[module1]
+                            )
 )

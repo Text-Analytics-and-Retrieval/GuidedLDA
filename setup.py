@@ -8,8 +8,8 @@
 from setuptools import setup, Extension
 # from Cython.Build import cythonize
 
-module1 = Extension('_guidedlda',
-                    sources = ['_guidedlda.c'])
+module1 = Extension('guidedlda._guidedlda',
+                    sources = ['guidedlda/_guidedlda.c', 'guidedlda/gamma.c'])
 
 setup(
     setup_requires=['pbr'],
